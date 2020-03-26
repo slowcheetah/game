@@ -1,0 +1,80 @@
+{
+  "anims": [
+    {
+      "key": "idle",
+      "type": "frame",
+      "frames": [
+        {
+          "key": "ninja",
+          "frame": "Idle_000",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Idle_001",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Idle_002",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Idle_003",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Idle_004",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Idle_005",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Idle_006",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Idle_007",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Idle_008",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Idle_009",
+          "duration": 0,
+          "visible": false
+        }
+      ],
+      "frameRate": 8,
+      "duration": 1,
+      "skipMissedFrames": true,
+      "delay": 0,
+      "repeat": -1,
+      "repeatDelay": 0,
+      "yoyo": false,
+      "showOnStart": false,
+      "hideOnComplete": false
+    }
+  ],
+  "globalTimeScale": 1
+}
