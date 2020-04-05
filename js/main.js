@@ -6,7 +6,16 @@ window.onload = function () {
     width: container.clientWidth,
     height: container.clientHeight,
     parent: 'game-container',
-    scene: [SceneMain]
+    scene: [SceneMain],
+    physics: {
+      default: 'matter',
+      matter: {
+        gravity: {
+          y: 1
+        },
+        debug: true
+      }
+    }
   };
 
   window.game = new Phaser.Game(config);

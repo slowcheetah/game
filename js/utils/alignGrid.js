@@ -68,6 +68,17 @@ class AlignGrid
 		this.placeAt(xx,yy,obj);
 
 	}
+
+	getIndexCoords(index) {
+		let yy = Math.floor(index / this.config.cols);
+		let xx = index - (yy * this.config.cols);
+
+		let x2 = this.cw * xx + this.cw / 2;
+		let y2 = this.ch * yy + this.ch / 2;
+
+		return {x: x2, y: y2};
+	}
+
 	showNumbers()
 	{
 		this.show();

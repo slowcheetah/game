@@ -74,6 +74,156 @@
       "yoyo": false,
       "showOnStart": false,
       "hideOnComplete": false
+    },
+    {
+      "key": "jump",
+      "type": "frame",
+      "frames": [
+        {
+          "key": "ninja",
+          "frame": "Jump_000",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Jump_001",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Jump_002",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Jump_003",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Jump_004",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Jump_005",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Jump_006",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Jump_007",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Jump_008",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Jump_009",
+          "duration": 0,
+          "visible": false
+        }
+      ],
+      "frameRate": 9,
+      "duration": 1,
+      "skipMissedFrames": true,
+      "delay": 0,
+      "repeat": 0,
+      "repeatDelay": 0,
+      "yoyo": false,
+      "showOnStart": false,
+      "hideOnComplete": false
+    },
+    {
+      "key": "run",
+      "type": "frame",
+      "frames": [
+        {
+          "key": "ninja",
+          "frame": "Run_000",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Run_001",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Run_002",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Run_003",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Run_004",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Run_005",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Run_006",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Run_007",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Run_008",
+          "duration": 0,
+          "visible": false
+        },
+        {
+          "key": "ninja",
+          "frame": "Run_009",
+          "duration": 0,
+          "visible": false
+        }
+      ],
+      "frameRate": 10,
+      "duration": 1,
+      "skipMissedFrames": true,
+      "delay": 0,
+      "repeat": -1,
+      "repeatDelay": 0,
+      "yoyo": false,
+      "showOnStart": false,
+      "hideOnComplete": false
     }
   ],
   "globalTimeScale": 1
