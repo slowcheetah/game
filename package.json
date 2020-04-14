@@ -4,10 +4,10 @@
   "description": "Phaser 3 game",
   "private": true,
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "watch": "webpack --mode development --watch",
-    "start": "webpack-dev-server --mode development --open"
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open"
   },
   "repository": {
     "type": "git",
@@ -21,10 +21,16 @@
   "homepage": "https://github.com/slowcheetah/game#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.5.2",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
+    "terser-webpack-plugin": "^2.3.5",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"

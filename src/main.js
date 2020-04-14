@@ -1,6 +1,6 @@
 import * as Phaser from 'phaser';
 import SceneMain from './sceneMain';
-import './styles/styles.css';
+import './styles/styles.scss';
 
 window.onload = function () {
   let containerId = 'game-container';
