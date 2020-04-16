@@ -1,6 +1,5 @@
 import * as Phaser from 'phaser';
 import Helper from "./utils/helper";
-import Align from "./utils/align";
 
 export default class Player extends Phaser.Physics.Matter.Sprite {
   constructor(scene, x, y, texture, label = null) {
@@ -9,11 +8,11 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
     this.canJump = true;
     this.goingOn = null;
     this.goingTo = null;
-    scene.add.existing(this);
-    Align.scaleToGameW(this, .10);
+    this.scene = scene;
+    this.scene.add.existing(this);
     this.play('idle');
 
-    scene.matter.world.on('collisionstart', (event, bodyA, bodyB) => {
+    this.scene.matter.world.on('collisionstart', (event, bodyA, bodyB) => {
       let body1 = Helper.getRootBody(bodyA);
       let body2 = Helper.getRootBody(bodyB);
       if (body1.label === this.label || body2.label === this.label) {
@@ -33,10 +32,11 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
       }
     });
 
-    scene.time.addEvent({delay: 50, callback: this.delayDone, callbackScope: this, loop: false});
-    scene.time.addEvent({delay: 16.6, callback: this.customUpdate, callbackScope: this, loop: true});
+    this.scene.time.addEvent({delay: 50, callback: this.delayDone, callbackScope: this, loop: false});
+    this.scene.time.addEvent({delay: 16.6, callback: this.customUpdate, callbackScope: this, loop: true});
   }
   delayDone() {
+    this.scene.grid.scale(this);
     this.setRectangle(this.displayWidth, this.displayHeight);
     this.body.label = this.label;
     this.setFixedRotation().setFriction(0.05).setBounce(0);
