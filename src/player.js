@@ -44,15 +44,15 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
   }
   jump() {
     if (this.canJump) {
-      this.setVelocityY(-9);
+      this.setVelocityY(-10);
       this.canJump = false;
     }
   }
   runLeft() {
-    (this.canJump) ? this.setVelocityX(-4) : this.setVelocityX(-3);
+    (this.canJump) ? this.setVelocityX(-4 / this.scene.grid.delta) : this.setVelocityX(-3 / this.scene.grid.delta);
   }
   runRight() {
-    (this.canJump) ? this.setVelocityX(4) : this.setVelocityX(3);
+    (this.canJump) ? this.setVelocityX(4 / this.scene.grid.delta) : this.setVelocityX(3 / this.scene.grid.delta);
   }
   goOn(obj) {
     let goingOn = {

@@ -22,10 +22,10 @@ export default class SceneMain extends Phaser.Scene {
   create() {
     this.matter.world.setBounds(0, 0, this.game.config.width, this.game.config.height, 32, true, true, false, true);
 
-    this.grid = new Grid(this, 20, 8);
+    this.grid = new Grid(this, 20);
     this.grid.showGrid(true);
 
-    let coords = this.grid.getCoords(101);
+    let coords = this.grid.getCoords(1, 2);
     this.player = new Player(this, coords.x, coords.y, 'ninja', 'ninja');
     this.player.on('created', () => console.log('player created'));
     window.player = this.player;
@@ -37,10 +37,10 @@ export default class SceneMain extends Phaser.Scene {
     this.box.body.jump = true;
     this.box.setInteractive();
     this.grid.scale(this.box);
-    this.grid.placeAt(103, this.box);
+    this.grid.placeAt(7, 1, this.box);
     this.box.on('pointerdown', () => this.player.goOn(this.box));
 
-    this.makeGround(140, 159);
+    this.makeGround(0, 0, this.grid.cols);
 
     this.cursors = this.input.keyboard.createCursorKeys();
   }
@@ -56,17 +56,17 @@ export default class SceneMain extends Phaser.Scene {
     }
   }
 
-  placeBlock(pos) {
+  placeBlock(col, row) {
     let block = this.matter.add.sprite(0, 0, 'ground', null, {isStatic: true});
     block.body.label = 'ground';
     block.body.jump = true;
     this.grid.scale(block);
-    this.grid.placeAt(pos, block, 'center', 'bottom');
+    this.grid.placeAt(col, row, block, 'center', 'bottom');
   }
 
-  makeGround(start, end) {
-    for (let i = start; i <= end; i++) {
-      this.placeBlock(i);
+  makeGround(row, colStart, colEnd) {
+    for (let col = colStart; col <= colEnd; col++) {
+      this.placeBlock(col, row);
     }
   }
 }
